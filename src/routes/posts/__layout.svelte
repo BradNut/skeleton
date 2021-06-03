@@ -24,8 +24,9 @@
     <h5>Archive</h5>
     <ui>
       {#each posts as post}
-        <li><a href={post.slug}>{post.title}</a></li>
+        <li><a sveltekit:prefetch href={`/posts/${post.slug}`}>{post.title}</a></li>
       {/each}
+      <li><a rel="external" href="https://leveluptutorials.com">Level Up</a></li>
     </ui>
   </aside>
 </div>
